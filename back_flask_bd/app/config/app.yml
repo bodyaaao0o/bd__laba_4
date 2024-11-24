@@ -1,0 +1,16 @@
+COMMON: &common
+  DEBUG: False
+  SQLALCHEMY_TRACK_MODIFICATIONS: False
+
+development:
+  <<: *common
+  DEBUG: True
+  SQLALCHEMY_DATABASE_URI: 'mysql+pymysql://root:bohdan200.6@localhost:3306/newww'
+
+production:
+  <<: *common
+  SQLALCHEMY_DATABASE_URI: 'mysql+pymysql://root:bohdan200.6@localhost:3306/newww'
+
+ADDITIONAL_CONFIG:
+  MYSQL_ROOT_USER: root
+  MYSQL_ROOT_PASSWORD: bohdan200.6
